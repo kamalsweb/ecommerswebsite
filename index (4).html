@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webbie's Fashion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA3L3Vwd2s2MTg0MzM0NC13aWtpbWVkaWEtaW1hZ2UtbGtocWw2YWIuanBn.jpg') center fixed; /* Replace with the path to your fashionable background image */
+            background-size: cover;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: left;
+            padding: 10px;
+            position: relative;
+        }
+
+        header img.logo {
+            width: 50px; /* Adjust the size of the shoe image */
+            height: auto;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-right: 10px;
+        }
+
+        header img.title-image {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px; /* Adjust the margin as needed */
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .formal, .stylish {
+            width: 48%;
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        img {
+            max-width: 100%; /* Make sure images don't exceed their container */
+            border-radius: 8px; /* Add rounded corners to images */
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+        }
+
+        i {
+            font-style: italic;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyKn-WXIQsC50wJePYUpp17xsvF8AguBbu__Nv7PPAbk7HK7W7jzTXTzXasWqgO-MqjRI&usqp=CAU" alt="Shoe Icon" class="logo"> <!-- Replace with the actual path to your shoe image -->
+        <h1>Webbie's Fashion</h1>
+        <img src="https://cf.ltkcdn.net/teens/images/std-xs/316415-340x213-group-of-teens.jpg" alt="Running Shoe" class="title-image"> <!-- Replace with the actual path to your running shoe image -->
+    </header>
+
+    <div class="container">
+
+        <div class="formal">
+            <h2>Formal</h2>
+            <div>
+                <h3>Men</h3>
+                <img src="https://onecms-res.cloudinary.com/image/upload/s--93D90D6U--/c_fill,g_auto,h_622,w_830/f_auto,q_auto/men-s-dress-code-business-casual_0.jpg?itok=qQEogdMo" alt="Formal Men"> <!-- Replace with the actual path to your formal men image -->
+                <!-- Add your content for formal men here -->
+                 <button onclick="addToCart('Formal Women')">Go to Cart</button>
+
+            </div>
+            <div>
+                <h3>Women</h3>
+                <img src="https://qph.fs.quoracdn.net/main-qimg-536b91b93ba5d966af5b83b8c90f8104.webp" alt="Formal Women"> <!-- Replace with the actual path to your formal women image -->
+                <!-- Add your content for formal women here -->
+                <button onclick="addToCart('Formal Women')">Go to Cart</button>
+            </div>
+        </div>
+        <div class="stylish">
+            <h2>Stylish</h2>
+            <div>
+                <h3>Men</h3>
+                <img src="https://img.freepik.com/premium-photo/cool-young-man-stylish-blue-denim-jacket-ripped-vintage-jeans-pink-jersey-sits-street-attractive-fashionable-guy-youth-casual-wear-enjoy-city-spring-summer-fashion-menswear_338491-9025.jpg?w=2000" alt="Stylish Men"> <!-- Replace with the actual path to your stylish men image -->
+                <!-- Add your content for stylish men here -->
+                <button onclick="addToCart('Formal Women')">Go to Cart</button>
+            </div>
+        <div>
+                <h3>Women</h3>
+                <img src="https://media1.popsugar-assets.com/files/thumbor/kIhtL5iDW0g_sUyzQ9X6-iRcqM0/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2020/12/16/852/n/47542948/9470186b4cbc33f0_baggy/i/Baggy-Jeans.jpg" alt="Stylish Women"> <!-- Replace with the actual path to your stylish women image -->
+                <!-- Add your content for stylish women here -->        <button onclick="addToCart('Formal Women')">Go to Cart</button>
+            </div>
+        </div>
+        <p>About us: We are special.</p>
+        <p>Contact us: 1749 276 453</p>
+        <p><i>Wonderful journey with the shopping.</i></p>
+    </div>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
